@@ -1,8 +1,4 @@
-# Cypress Project
 
-This is an automated testing project using [Cypress](https://www.cypress.io/).
-
-## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js installed (Check with `node -v`)- use npm install 
@@ -11,7 +7,7 @@ This is an automated testing project using [Cypress](https://www.cypress.io/).
 ### Installation
 1. Clone the repository:
    ```sh
-   git clone <your-repo-url>
+   git clone <https://github.com/shitalshevate/fitpage.git>
    cd cypress-project
 
 ### Install Dependencies
@@ -19,3 +15,5 @@ This is an automated testing project using [Cypress](https://www.cypress.io/).
 1. npm install
 2. npm install cypress --save-dev
 3. npx cypress open
+4. To run scrips in headless mode: 
+npx cypress run --record --key <your-record-key>

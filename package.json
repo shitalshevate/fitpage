@@ -15,9 +15,17 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:chrome": "cypress run --browser chrome"
   },
   "devDependencies": {
-    "cypress": "^14.2.1"
+    "@faker-js/faker": "^9.6.0",
+    "@shelex/cypress-allure-plugin": "^2.41.0",
+    "allure-commandline": "^2.33.0",
+    "concurrently": "^9.1.2",
+    "cypress": "^14.2.1",
+    "cypress-dotenv": "^3.0.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^2.0.1"
   }
 }
