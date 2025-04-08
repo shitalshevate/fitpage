@@ -42,7 +42,7 @@ describe("Sign Up and Login test cases for India running website", function () {
 });
 
 describe("Create an event on india running dashboard", function () {
-  it("Create an on ground event", function () {
+  it.only("Create an on ground event", function () {
     cy.reload();
     cy.visit(url);
     signUpSignIn.login1();

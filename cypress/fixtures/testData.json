@@ -8,5 +8,6 @@
   "organizationName": "fitpage",
   "incorrectOtp": "Incorrect Otp",
   "incorrectEmail": "Invalid Email",
-  "eventName": "Fitpage India running event"
+  "eventName": "Fitpage India running event",
+  "addressField" : "Bandra East, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India"
 }

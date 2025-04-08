@@ -44,16 +44,15 @@ clickCreateEventButton() {
   }
 
   checkLocationsuggestion() {
-    cy.contains(
-      "Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra, India",
-      { timeout: 10000 }
-    ).click();
+    cy.get('.pac-item')
+  .contains('Bandra Kurla Complex')
+  .click({ force: true });
   }
 
   addressField() {
     cy.get("#Address_text").should(
       "have.value",
-      "Diamond Market Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051, India"
+      testData.addressField
     );
   }
 
@@ -199,8 +198,15 @@ clickCreateEventButton() {
     cy.get("img[alt='pop-up-icon']").should('be.visible');
   }
 
+  successMessage() {
+    cy.get("h3.text-sm.font-semibold").should("not.exist");
+  } 
+
   closePopUpButton() {
+    cy.contains("h3", "Success").should("not.exist");
+    cy.wait(2000);
     cy.get(".w-5.h-5.cursor-pointer").click();
+
   }
 
   eventInformationTab() {
@@ -251,7 +257,9 @@ clickCreateEventButton() {
     this.yesConfirmButton();
     cy.wait(2000);
     this.liveEventPopUp();
-    cy.wait(3000);
+    cy.wait(5000);
+    this.successMessage();
+    cy.wait(2000);
     this.closePopUpButton();
     cy.wait(2000);
     this.checkPublishedEvent();
