@@ -17,3 +17,4 @@
 3. npx cypress open
 4. To run scrips in headless mode: 
 npx cypress run --record --key <your-record-key>
+5. Open Dashboard URL which gets generated at the end once headless run is completed
